@@ -2,8 +2,6 @@ package com.geek.android_trainee_task_2021.di
 
 import com.geek.android_trainee_task_2021.BuildConfig
 import com.geek.android_trainee_task_2021.data.remote.OpenWeatherApi
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -46,8 +44,4 @@ object AppModule {
     fun provideApi(retrofit: Retrofit): OpenWeatherApi =
         retrofit.create(OpenWeatherApi::class.java)
 
-    @Provides
-    fun provideGson(): Gson {
-        return GsonBuilder().setLenient().create()
-    }
 }
