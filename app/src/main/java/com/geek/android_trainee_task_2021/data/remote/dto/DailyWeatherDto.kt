@@ -1,5 +1,8 @@
 package com.geek.android_trainee_task_2021.data.remote.dto
 
+import com.geek.android_trainee_task_2021.domain.model.DailyWeather
+import com.geek.android_trainee_task_2021.domain.model.DaysWeather
+
 
 data class DailyWeatherDto(
     val daily: List<Daily>?,
@@ -47,3 +50,24 @@ data class Temp(
     val morn: Double?,
     val night: Double?
 )
+
+fun DailyWeatherDto.mapToDailyWeather(): DailyWeather {
+    val daysWeather = ArrayList<DaysWeather>()
+
+    this.daily?.forEach { i ->
+        daysWeather.add(
+            DaysWeather(
+                i.dt,
+                i.temp?.max,
+                i.temp?.min,
+                i.weather?.get(0)?.main,
+                i.weather?.get(0)?.description,
+                i.weather?.get(0)?.icon
+            )
+        )
+    }
+    return DailyWeather(
+        this.timezone,
+        daysWeather
+    )
+}

@@ -1,5 +1,7 @@
 package com.geek.android_trainee_task_2021.data.remote.dto
 
+import com.geek.android_trainee_task_2021.domain.model.CurrentWeather
+import com.geek.android_trainee_task_2021.domain.model.Latlng
 import com.google.gson.annotations.SerializedName
 
 data class CurrentWeatherDto(
@@ -61,3 +63,23 @@ data class Wind(
     @SerializedName("speed")
     val speed: Double?
 )
+
+fun CurrentWeatherDto.mapToCurrentWeather(): CurrentWeather {
+    return CurrentWeather(
+        name = this.name,
+        main = this.weather?.get(0)?.main,
+        description = this.weather?.get(0)?.description,
+        icon = this.weather?.get(0)?.icon,
+        temp = this.main?.temp,
+        temp_max = this.main?.temp_max,
+        temp_min = this.main?.temp_min,
+        sunrise = this.sys?.sunrise,
+        sunset = this.sys?.sunset,
+        humidity = this.main?.humidity,
+        pressure = this.main?.pressure,
+        speed = this.wind?.speed,
+        dt = this.dt,
+        Latlng(this.coord?.lat.toString(), this.coord?.lon.toString()),
+        timeZone = this.timezone
+    )
+}
