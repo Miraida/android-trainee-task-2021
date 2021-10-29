@@ -4,11 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/drawable/bg_bottom_sheet.xml" value="0.13055555555555556" />
+        <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/drawable/bg_edit_text.xml" value="0.13055555555555556" />
+        <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/drawable/bg_location_layout.xml" value="0.13055555555555556" />
+        <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/drawable/ic_error_24.xml" value="0.1" />
         <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/drawable/ic_location_black.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/drawable/ic_non_internet.xml" value="0.12916666666666668" />
         <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/drawable/ic_sunrise.xml" value="0.1287037037037037" />
         <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/layout/activity_main.xml" value="0.1094224924012158" />
-        <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/layout/weather_fragment.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/layout/fragment_network.xml" value="0.13900273224043716" />
+        <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/layout/item_daily_weather_rv.xml" value="0.16597222222222222" />
+        <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/layout/weather_fragment.xml" value="0.16" />
         <entry key="..\:/AndroidProjects/androidtraineetask2021mira2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>

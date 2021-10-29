@@ -32,5 +32,10 @@
     <string name="error_title">Error %1$d</string>
     <string name="empty_edt_error">Enter city name!!!</string>
     <string name="no_internet_connection">No Internet Connection! Check the Internet and try again…</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_internet">No internet</string>
+    <string name="try_again">Try again</string>
+    <string name="no_connection">No Internet connection!</string>
 
 </resources>

@@ -58,7 +58,9 @@ class WeatherFragment : BaseFragment<WeatherFragmentBinding>() {
             ui.edtLocation.hideKeyboard()
             bottomSheet.hide()
 
-            loadWeather()
+            if (requireContext().checkNetwork()) loadWeather()
+            else requireContext().errorDialog(404, getString(R.string.no_connection))
+
         } else ui.edtLocation.setHintTextColor(
             ContextCompat.getColor(
                 requireContext(),
@@ -88,7 +90,7 @@ class WeatherFragment : BaseFragment<WeatherFragmentBinding>() {
                 }
                 Status.ERROR -> {
                     vModel.progressBar.value = false
-                    requireContext().errorDialog(it.code,it.msg)
+                    requireContext().errorDialog(it.code, it.msg)
                     pref.clearStoredCityName()
                 }
             }
@@ -109,7 +111,7 @@ class WeatherFragment : BaseFragment<WeatherFragmentBinding>() {
                     }
                     Status.ERROR -> {
                         vModel.progressBar.value = false
-                        requireContext().errorDialog(it.code,it.msg)
+                        requireContext().errorDialog(it.code, it.msg)
                     }
                 }
             })
@@ -126,7 +128,7 @@ class WeatherFragment : BaseFragment<WeatherFragmentBinding>() {
     private fun setCurrentWeatherData(data: CurrentWeather?) {
         sunrise = data?.sunrise
         sunset = data?.sunset
-        ui.mainImage.setImage(isDay(sunset,sunrise))
+        ui.mainImage.setImage(isDay(sunset, sunrise))
 
         ui.weatherTv.text = data?.main
         data?.icon?.let { ui.weatherIv.loadImage(it) }
