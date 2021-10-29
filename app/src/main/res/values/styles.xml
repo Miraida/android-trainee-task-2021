@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="title_text_style">
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">-0.05</item>
+        <item name="lineHeight">19sp</item>
+        <item name="fontFamily">@font/barlow</item>
+    </style>
+    <style name="sub_title_text_style">
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="lineHeight">10sp</item>
+        <item name="fontFamily">@font/barlow</item>
+    </style>
+
+    <style name="location_text_style">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="date_text_style">
+        <item name="android:fontFamily">@font/barlow_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+
+    <style name="weather_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/barlow_regular</item>
+    </style>
+
+    <style name="deg_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">64sp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:letterSpacing">-0.05</item>
+        <item name="android:fontFamily">@font/barlow_regular</item>
+    </style>
+
+    <style name="deg_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_toEndOf">@id/deg_textView</item>
+    </style>
+
+    <style name="deg_change_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/barlow_regular</item>
+    </style>
+
+    <style name="search_edt_text">
+        <item name="android:background">@drawable/bg_edit_text</item>
+        <item name="android:layout_marginTop">70dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+</resources>

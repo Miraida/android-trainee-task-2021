@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">android-trainee-task-2021-mira</string>
+    <string name="app_name">android-trainee-task-2021</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+    <string name="sunny">Sunny</string>
+    <string name="deg_down">°C↓</string>
+    <string name="deg_up">°C↑</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="pressure">Pressure</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="daytime">Daytime</string>
+    <string name="currentWeather">currentWeather</string>
+    <string name="percentage">%</string>
+    <string name="mbar">mBar</string>
+    <string name="m_s">m/s</string>
+    <string name="deg_c">°C</string>
+    <string name="default_city_name">Bishkek, Kyrgyzstan</string>
+    <string name="pm">PM</string>
+    <string name="am">AM</string>
+    <string name="location">Location</string>
 </resources>
