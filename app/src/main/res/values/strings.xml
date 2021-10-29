@@ -1,11 +1,12 @@
 <resources>
+    <!--       App               -->
     <string name="app_name">android-trainee-task-2021</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="todo">TODO</string>
+
+    <!--       Weather            -->
     <string name="sunny">Sunny</string>
-    <string name="deg_down">°C↓</string>
-    <string name="deg_up">°C↑</string>
+    <string name="deg_down">%1$d °C↓</string>
+    <string name="deg_up">%1$d °C↑</string>
+    <string name="up_down_deg">%1$s °C↑ %2$s °C↓</string>
     <string name="humidity">Humidity</string>
     <string name="wind">Wind</string>
     <string name="pressure">Pressure</string>
@@ -14,11 +15,22 @@
     <string name="daytime">Daytime</string>
     <string name="currentWeather">currentWeather</string>
     <string name="percentage">%</string>
-    <string name="mbar">mBar</string>
-    <string name="m_s">m/s</string>
+    <string name="mBar">%1$d mBar</string>
+    <string name="m_s">%1$d m/s</string>
     <string name="deg_c">°C</string>
-    <string name="default_city_name">Bishkek, Kyrgyzstan</string>
     <string name="pm">PM</string>
     <string name="am">AM</string>
     <string name="location">Location</string>
+    <string name="city_name">City name</string>
+
+    <!--         DateFormat               -->
+    <string name="main_date_format">EEEE,dd MMMM</string>
+    <string name="day_date_format">EE, dd</string>
+
+
+    <!--             Error                 -->
+    <string name="error_title">Error %1$d</string>
+    <string name="empty_edt_error">Enter city name!!!</string>
+    <string name="no_internet_connection">No Internet Connection! Check the Internet and try again…</string>
+
 </resources>

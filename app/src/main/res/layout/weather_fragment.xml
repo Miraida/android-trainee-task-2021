@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/main_image"
         android:layout_width="match_parent"
         android:layout_height="@dimen/image_height"
-        android:contentDescription="@string/todo"
         android:scaleType="fitXY"
         android:src="@drawable/ic_day" />
 
@@ -27,10 +26,10 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="12dp"
+            app:layout_constraintBottom_toTopOf="@id/linear1_3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/date_textView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/linear1_3">
+            app:layout_constraintStart_toEndOf="@id/date_tv"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -41,7 +40,7 @@
                 android:src="@drawable/ic_location" />
 
             <TextView
-                android:id="@+id/location_textView"
+                android:id="@+id/location_tv"
                 style="@style/location_text_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -62,14 +61,14 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:id="@+id/weather_imageView"
+                android:id="@+id/weather_iv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/currentWeather"
                 android:src="@drawable/ic_sun_cloud" />
 
             <TextView
-                android:id="@+id/weather_textView"
+                android:id="@+id/weather_tv"
                 style="@style/weather_text_style"
                 android:text="@string/sunny" />
         </LinearLayout>
@@ -87,7 +86,7 @@
             app:layout_constraintTop_toBottomOf="@id/city_layout">
 
             <TextView
-                android:id="@+id/deg_textView"
+                android:id="@+id/deg_tv"
                 style="@style/deg_style"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="4dp" />
@@ -112,12 +111,12 @@
             app:layout_constraintTop_toBottomOf="@id/city_layout">
 
             <TextView
-                android:id="@+id/deg_up_textView"
+                android:id="@+id/deg_up_tv"
                 style="@style/deg_change_text_style"
                 android:text="@string/deg_up" />
 
             <TextView
-                android:id="@+id/deg_down_textView"
+                android:id="@+id/deg_down_tv"
                 style="@style/deg_change_text_style"
                 android:text="@string/deg_down" />
 
@@ -142,7 +141,7 @@
                 android:src="@drawable/ic_humedity" />
 
             <TextView
-                android:id="@+id/humidity_textView"
+                android:id="@+id/humidity_tv"
                 style="@style/title_text_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -175,12 +174,12 @@
                 android:src="@drawable/ic_pressure" />
 
             <TextView
-                android:id="@+id/pressure_textView"
+                android:id="@+id/pressure_tv"
                 style="@style/title_text_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/mbar" />
+                android:text="@string/mBar" />
 
             <TextView
                 style="@style/sub_title_text_style"
@@ -201,14 +200,13 @@
             app:layout_constraintStart_toEndOf="@id/linear2_2"
             app:layout_constraintTop_toBottomOf="@id/linear1">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:contentDescription="@string/todo"
                 android:src="@drawable/ic_wind" />
 
             <TextView
-                android:id="@+id/wind_textView"
+                android:id="@+id/wind_tv"
                 style="@style/title_text_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -241,7 +239,7 @@
                 android:src="@drawable/ic_sunset" />
 
             <TextView
-                android:id="@+id/sunrise_textView"
+                android:id="@+id/sunrise_tv"
                 style="@style/title_text_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -274,7 +272,7 @@
                 android:src="@drawable/ic_sunrise" />
 
             <TextView
-                android:id="@+id/sunset_textView"
+                android:id="@+id/sunset_tv"
                 style="@style/title_text_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -307,7 +305,7 @@
                 android:src="@drawable/ic_day_time" />
 
             <TextView
-                android:id="@+id/day_time_textView"
+                android:id="@+id/day_time_tv"
                 style="@style/title_text_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -330,64 +328,79 @@
             android:indeterminateTint="@color/blue"
             app:layout_constraintBottom_toBottomOf="@id/city_layout"
             app:layout_constraintEnd_toStartOf="@id/city_layout"
-            app:layout_constraintStart_toEndOf="@id/date_textView"
+            app:layout_constraintStart_toEndOf="@id/date_tv"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/date_textView"
+            android:id="@+id/date_tv"
             style="@style/date_text_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            app:layout_constraintTop_toTopOf="@id/city_layout"
             app:layout_constraintBottom_toBottomOf="@id/city_layout"
+            app:layout_constraintEnd_toStartOf="@id/city_layout"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/city_layout"/>
+            app:layout_constraintTop_toTopOf="@id/city_layout" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_daily_weather"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linear3" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <FrameLayout
+        android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="match_parent"
         app:behavior_hideable="true"
         app:behavior_peekHeight="0dp"
+        android:background="@drawable/bg_bottom_sheet"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
-
-    <androidx.cardview.widget.CardView
-            android:id="@+id/bottom_sheet"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardCornerRadius="16dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top|center"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/barlow_regular"
-                android:text="@string/location"
-                android:textColor="@color/light_gray"
-                android:textSize="16sp" />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/edt_location"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/bg_edit_text"
-                android:drawableEnd="@drawable/ic_location_black"
-                android:fontFamily="@font/barlow"
-                android:padding="12dp"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_layout"
+                android:layout_gravity="bottom">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/barlow_regular"
+                    android:text="@string/location"
+                    android:textColor="@color/light_gray"
+                    android:textSize="16sp" />
 
-        </androidx.cardview.widget.CardView>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/city_name"
+                    android:fontFamily="@font/barlow"
+                    android:paddingHorizontal="10dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:layout_marginHorizontal="50dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/location_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_marginTop="16dp"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_location_black" />
+
+            </FrameLayout>
+
     </FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
